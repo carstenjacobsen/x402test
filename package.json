@@ -11,7 +11,7 @@
     "next": "^15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "x402-stellar": "^0.2.0"
+    "x402-stellar": "file:./vendor/x402-stellar"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
