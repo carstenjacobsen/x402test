@@ -1,0 +1,51 @@
+{
+  "name": "x402-stellar",
+  "version": "0.1.0",
+  "description": "Easy x402 HTTP payment protocol implementation for Stellar — Next.js middleware, keypair + Freighter client, XLM and USDC support",
+  "keywords": ["x402", "stellar", "soroban", "payments", "http402", "nextjs", "usdc", "xlm"],
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./server": {
+      "types": "./dist/server/index.d.ts",
+      "import": "./dist/server/index.js",
+      "require": "./dist/server/index.cjs"
+    },
+    "./client": {
+      "types": "./dist/client/index.d.ts",
+      "import": "./dist/client/index.js",
+      "require": "./dist/client/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@x402/core": "^2.6.0",
+    "@stellar/stellar-sdk": "^14.0.0"
+  },
+  "peerDependencies": {
+    "@stellar/freighter-api": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@stellar/freighter-api": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@stellar/freighter-api": "6.0.1",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0"
+  }
+}
