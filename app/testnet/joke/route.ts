@@ -116,9 +116,9 @@ const DEMO_PAYTO = "GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5";
 
 export const GET = withPayment(jokeHandler, {
   network: STELLAR_TESTNET,
-  payTo: process.env.PAYTO_ADDRESS || DEMO_PAYTO,
+  payTo: process.env.RECIPIENT_ADDRESS || DEMO_PAYTO,
   price: "0.10",
-  description: "Media Library",
+  description: "Random Jokes",
   mimeType: "application/json",
 });
 
